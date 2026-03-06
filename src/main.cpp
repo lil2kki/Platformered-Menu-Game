@@ -44,7 +44,7 @@ class $modify(MenuGameLayerExt, MenuGameLayer) {
         MenuGameLayer::update(p0);
 
         if (SETTING(bool, "Freeze Background")) {
-            m_backgroundSpeed = 0.1;
+            m_backgroundWrapPosition = 0.1;
             findFirstChildRecursive<CCNode>(m_groundLayer,
                 [](CCNode* node) {
                     auto parent_id = node->getParent()->getID();
